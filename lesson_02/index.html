@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework 02</title>
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+	
+		*,
+		*::before,
+		*::after {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+			box-sizing: border-box;
+		}
+	
+		html,
+		body {
+			min-height: 100svh;
+			margin: 0;
+			padding: 0;
+			min-width: 320px;
+			width: 100%;
+		}
+	
+		body {
+			font-family: Montserrat;
+			font-size: 100%;
+			line-height: 1;
+			font-size: 1.2rem;
+			background: url("img/bg_laptop.webp") right center / cover no-repeat;
+		}
+		@media (max-width: 992.98px){
+			body {
+				background-position: center;
+			}
+		}
+		a {
+			color: #8b00ad;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+		a:hover {
+			color: #494949;
+		}
+		.wrapper {
+			width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+		}
+	
+		.rootpage {
+			color: #002741;
+			height: 100%;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			max-width: 1000px;
+			position: relative;
+			z-index: 50;
+			overflow: hidden;
+		}
+		
+		@media (max-width: 767px) {
+			.rootpage {
+				padding: 30px 15px;
+			}
+		}
+	
+		h1 {
+			text-align: center;
+			font-size: 2.5rem;
+			margin: 0px auto 2rem auto;
+		}
+		h2 {
+			text-align: center;
+			font-size: 2rem;
+			margin: 0px auto 2rem auto;
+		}
+	
+		@media (max-width: 767px) {
+			h1 {
+				font-size: 1.85rem;
+				margin: 0px 0px 1.25rem 0px;
+			}
+		}
+	
+		.rootpage__body {
+			display: flex;
+			align-items: center;
+		}
+	
+		@media (max-width: 700px) {
+			.rootpage__body {
+				flex-direction: column;
+				row-gap: 30px;
+				align-items: stretch;
+			}
+		}
+	
+		.rootpage__list {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+			gap: 1.25rem;
+		}
+		li {
+			padding: 0.625rem;
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.625rem;
+			border: 1px solid rgba(27, 0, 79, 0.064);
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			background-color: #e1e1e1;
+		}
+	</style>
+</head>
+<body>
+	<div class="rootpage">
+		<h1>Домашня робота 02</h1>
+		<div class="rootpage__body">
+			<div>
+				<ol class="rootpage__list">
+					<li>
+						<a href="./html/task_00.html" target="_blank">Завдання 00</a>
+						<img src="img/task_00.png" alt="Image">
+					</li>
+					<li>
+						<a href="./html/task_01.html" target="_blank">Завдання 01</a>
+						<p><strong>Задача 01.</strong> Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+					</li>
+					<li>
+						<a href="./html/task_02.html" target="_blank">Завдання 02</a>
+						<p><strong>Задача 2.</strong> Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.</p>
+					</li>
+					<li>
+						<a href="./html/task_03.html" target="_blank">Завдання 03</a>
+						<p><strong>Задача 03.</strong> Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</p>
+					</li>
+					<li>
+						<a href="./html/task_04.html" target="_blank">Завдання 04</a>
+						<p><strong>Задача 04.</strong> Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+					</li>
+					<li>
+						<a href="./html/task_05.html" target="_blank">Завдання 05</a>
+						<p><strong>Задача 05.</strong> Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.</p>
+					</li>
+					<li>
+						<a href="./html/task_06.html" target="_blank">Завдання 06</a>
+						<p><strong>Задача 06.</strong> З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+					</li>
+					<li>
+						<a href="./html/task_07.html" target="_blank">Завдання 07</a>
+						<p><strong>Задача 07.</strong> Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</p>
+					</li>
+				</ol>
+				<!-- <h2>Додаткові завдання</h2>
+				<ol class="rootpage__list">
+					<li>
+						<a href="./html/task_08.html" target="_blank">Завдання 08</a>
+						<p>Дано ширину екрана та кількість елементів, які повинні бути відображені у рядку. Визначити ширину елементів, які повинні бути відображені у цьому рядку.</p>
+					</li>
+					<li>
+						<a href="./html/task_09.html" target="_blank">Завдання 09</a>
+						<p>З клавіатури вводиться розмір заробітної плати та розмір прожиткового мінімуму. Визначити розмір соціальної допомоги (ввжаємо, що заробітна плата є меншою).</p>
+					</li>
+					<li>
+						<a href="./html/task_10.html" target="_blank">Завдання 10</a>
+						<p>З клавіатури вводяться вартість одиниці та кількість одиниць двох товарів. Вивести на екран вартість кожного з видів товарів окремо і загальну вартість.</p>
+					</li>
+					<li>
+						<a href="./html/task_11.html" target="_blank">Завдання 11</a>
+						<p>З клавіатури вводиться вік дитини. Вивести на екран через скільки років вона буде відвідувати садочок, піде у школу, закінчить школу, вступить і закінчить</p>
+					</li>
+					<li>
+						<a href="./html/task_12.html" target="_blank">Завдання 12</a>
+						<p>Визначити, яку платню одержить на фірмі сумісник за виконану роботу, якщо йому нараховано S грн., а податок становить 20%.</p>
+					</li>
+					<li>
+						<a href="./html/task_13.html" target="_blank">Завдання 13</a>
+						<p>Дано три дійсні змінні a, b і c. Скласти алгоритм, який міняє місцями значення цих змінних наступним чином: змінна a набуває значення змінної b, змінна b набуває значення змінної c, а змінна c – попереднє значення змінної a.</p>
+					</li>
+					<li>
+						<a href="./html/task_14.html" target="_blank">Завдання 14</a>
+						<p>Скласти алгоритм, який обчислює цілу і дробову частину даного числа х. Наприклад: число 23,56 => ціла: 23, дробова: 0,56.</p>
+					</li>
+					<li>
+						<a href="./html/task_15.html" target="_blank">Завдання 15</a>
+						<p>Розробити програму (не використовувати if), яка за номером року Y визначає номер століття C (врахувати, що початком XX століття був 1901, а не 1900 рік).</p>
+					</li>
+				</ol> -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
