@@ -24,9 +24,11 @@ const SECONDS_IN_ONE_HOUR = 3600
 // Обчислення результатів
 
 const timeHours = Math.floor(timeSeconds / SECONDS_IN_ONE_HOUR);
-const timeSecondsLeft = timeSeconds - (timeHours * SECONDS_IN_ONE_HOUR);
+// const timeSecondsLeft = timeSeconds - (timeHours * SECONDS_IN_ONE_HOUR);
+const timeSecondsLeft = timeSeconds % SECONDS_IN_ONE_HOUR
 const timeMinutes = Math.floor(timeSecondsLeft / SECONDS_IN_ONE_MINUTE);
-const currentTimeSeconds = timeSecondsLeft - (timeMinutes * SECONDS_IN_ONE_MINUTE)
+// const currentTimeSeconds = timeSecondsLeft - (timeMinutes * SECONDS_IN_ONE_MINUTE);
+const currentTimeSeconds = timeSecondsLeft % SECONDS_IN_ONE_MINUTE;
 
 const formattedHours = String(timeHours).padStart(2, '0');
 const formattedMinutes = String(timeMinutes).padStart(2, '0');
