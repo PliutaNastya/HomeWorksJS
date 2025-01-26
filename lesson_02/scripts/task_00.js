@@ -13,9 +13,9 @@ s4 = Math.sin(a/-b)
 
 // Введення даних 
 
-const a = 10;
-const b = 5;
-const c = 10;
+const a = parseFloat(prompt('Введіть перше число', '1'));
+const b = parseFloat(prompt('Введіть друге число', '1'));
+const c = parseFloat(prompt('Введіть третє число', '1'));
 
 // Обчислення результатів
 
