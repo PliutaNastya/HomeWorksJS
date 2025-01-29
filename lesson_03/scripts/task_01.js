@@ -20,7 +20,9 @@ const numCandiesSecondChild = parseInt(prompt(`Введіть кількість
 
 
 // Обчислення результатів та Виведення результатів 
-if (isNaN(numCandiesFirstChild) || isNaN(numCandiesSecondChild)) 
+if (firstChildName === "" || secondChildName === "") 
+	document.write(`Ви не ввели ім'я!`)
+else if (isNaN(numCandiesFirstChild) || isNaN(numCandiesSecondChild)) 
 	document.write(`Ви ввели некоректні дані, будь ласка введіть числа`)
 else if (numCandiesFirstChild > numCandiesSecondChild)
 	document.write(`У ${firstChildName} цукерок більше. Різниця складає ${numCandiesFirstChild - numCandiesSecondChild} цукерок`)

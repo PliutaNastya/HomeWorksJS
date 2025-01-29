@@ -23,8 +23,10 @@ const firstAttempt = parseInt(prompt('Перша спроба. Введіть б
 const secondAttempt = parseInt(prompt('Друга спроба. Введіть будь-яке число від 1 до 5'))
 
 // Обчислення та виведення результатів
-if (isNaN(firstAttempt) || isNaN(secondAttempt) || firstAttempt > maxNumber || firstAttempt < minNumber || secondAttempt > maxNumber || secondAttempt < minNumber)
+if (isNaN(firstAttempt) || isNaN(secondAttempt))
 	document.write(`Ви ввели некоректні дані, будь ласка, введіть число від 1 до 5!`)
+else if (firstAttempt > maxNumber || firstAttempt < minNumber || secondAttempt > maxNumber || secondAttempt < minNumber)
+	document.write(`Ви ввели число, що виходить за межі діапазону від 1 до 5!`)
 else if (firstAttempt === randomNumber) 
 	document.write(`
 		<p>Ви вгадали число з першої спроби.🎉</p>
