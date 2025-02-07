@@ -18,10 +18,11 @@ if (confirm('Почати тестування?')) {
 		sum += enteredAmount
 
 		if (sum < moneyAmount) {
-			const remainingAmount = moneyAmount - enteredAmount
+			const remainingAmount = moneyAmount - sum
 			alert(`Вам ще залишилось сплатити ${remainingAmount} грн`)
 		} else {
 			alert(`Ви платите занадто багато, візьміть здачу ${sum - moneyAmount} грн`)
+			break
 		}
 		
 	} while (sum < moneyAmount);
