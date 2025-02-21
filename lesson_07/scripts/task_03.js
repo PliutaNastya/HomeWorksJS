@@ -5,7 +5,7 @@
 if (confirm('Почати тестування?')) {
 	const isWorkingDay = (dayNumber) => dayNumber >= 1 && dayNumber <= 5
 
-	const dayNumber = parseInt(prompt('Введіть день тижня', '2'))
+	const dayNumber = parseInt(prompt('Введіть номер дня тижня (1-7)', '3'))
 
 	if (isWorkingDay(dayNumber)) alert('Вам пора йти на роботу!')
 	else alert('Можна ще поспати. Сьогодні вихідний!')

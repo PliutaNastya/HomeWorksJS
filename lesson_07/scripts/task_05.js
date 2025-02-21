@@ -3,10 +3,11 @@
 // Задача 05. Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.
 
 if (confirm('Почати тестування?')) {
-	let countEvenNumbers = 0
-	let countPositiveNumbers = 0
-	let countNumbersOverOneHundred = 0
 	const getEvenNumbers = (a = 1, b = 1, c = 1) => {
+		let countEvenNumbers = 0
+		let countPositiveNumbers = 0
+		let countNumbersOverOneHundred = 0
+
 		if (a % 2 === 0) countEvenNumbers++
 		if (b % 2 === 0) countEvenNumbers++
 		if (c % 2 === 0) countEvenNumbers++

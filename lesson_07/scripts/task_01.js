@@ -30,7 +30,7 @@ if (confirm('Почати тестування?')) {
 		return res
 	}
 
-	const monthNumber = parseInt(prompt('Введіть назву місяця', '4'))
+	const monthNumber = parseInt(prompt('Введіть номер місяця', '4'))
 
 	document.write(`<p>Місяцю під номером ${monthNumber} відповідає пора року - ${getSeasonOfYear(monthNumber)}</p>`)
 }

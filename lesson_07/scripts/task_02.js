@@ -48,5 +48,5 @@ if (confirm('Почати тестування?')) {
 
 	const monthNumber = parseInt(prompt('Введіть номер місяця', '2'))
 
-	document.write(`Номеру місяця - ${monthNumber} відповідає назва ${getMonthName(monthNumber)}`)
+	document.write(`<p>Номеру місяця - ${monthNumber} відповідає назва ${getMonthName(monthNumber)}</p>`)
 }
