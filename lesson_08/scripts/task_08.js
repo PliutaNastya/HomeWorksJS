@@ -26,9 +26,7 @@ if (confirm('Почати тестування?')) {
 
 		do {
 			userAnswer = getUserAnswer()
-			for (let i = 0; i < arr.length; i++) {
-				if (userAnswer === (i + 1)) sum += arr[i]
-			}
+			sum += arr[userAnswer]
 		} while (confirm('Бажаєте відкрити ще один номер?'))
 		
 		return sum
