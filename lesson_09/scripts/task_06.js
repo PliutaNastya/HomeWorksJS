@@ -18,8 +18,10 @@ if (confirm('Почати тестування?')) {
 
 	const multiplyElements = (arr, value) => {
 
-		arr.forEach((el, index, arr) => el > arr[0] ? arr[index] = el * value : el)
-
+		arr.forEach((el, index, arr) => {
+			if (el > arr[0]) arr[index] = el * value
+			else el
+		})
 		return arr
 	}
 

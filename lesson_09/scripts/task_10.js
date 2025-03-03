@@ -18,16 +18,14 @@ if (confirm('Почати тестування?')) {
 	}
 
 	const getArrOfTaxes = (arr, tax) => {
-		const newArr = []
 
-		arr.map(el => newArr.push(el * tax))
+		const newArr = arr.map(el => el * tax)
 		
 		return newArr
 	}
 
 	const arr = createArr()
-	const copyArr = [...arr]
-	const arrOfTaxes = getArrOfTaxes(copyArr, 0.2)
+	const arrOfTaxes = getArrOfTaxes(arr, 0.2)
 
 	document.write(`
 		<p>Початковий масив з цінами - <span>${arr}</span></p>

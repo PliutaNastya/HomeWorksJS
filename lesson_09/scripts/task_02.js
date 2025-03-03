@@ -12,10 +12,9 @@ if (confirm('Почати тестування?')) {
 
 		return arr
 	}
-
-	const fillFirstHalf = (arr, value) => arr.fill(value, 0, arr.length/2)
-	
-	const fillSecondHalf = (arr, value) => arr.fill(value, arr.length / 2)
+	const halfArr = Math.floor(arr.length / 2)
+	const fillFirstHalf = (arr, value) => arr.fill(value, 0, halfArr)
+	const fillSecondHalf = (arr, value) => arr.fill(value, halfArr)
 
 	const getFinalArray = (arr) => {
 		fillFirstHalf(arr, 1)

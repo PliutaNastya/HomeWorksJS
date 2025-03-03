@@ -18,7 +18,10 @@ if (confirm('Почати тестування?')) {
 
 	const getArrayWithDiscount = (arr, value, discount) => {
 		
-		arr.forEach((el, index, arr) => el > value ? arr[index] = el - (el * discount) : el)
+		arr.forEach((el, index, arr) => {
+			if (el > value) arr[index] = el - (el * discount)
+			else el
+		})
 
 		return arr
 	}

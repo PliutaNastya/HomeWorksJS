@@ -17,17 +17,15 @@ if (confirm('Почати тестування?')) {
 	}
 
 	const getArrWithFirstLetterOfNames = arr => {
-		let newArr = []
 
-		arr.map(el => newArr.push(el[0]))
+		let newArr = arr.map(el => el[0])
 
 		return newArr
 	}
 
 	const arr = createArr()
-	const copyArr = [...arr]
 
-	const arrWithFirstLetterOfNames = getArrWithFirstLetterOfNames(copyArr)
+	const arrWithFirstLetterOfNames = getArrWithFirstLetterOfNames(arr)
 
 	document.write(`
 		<p>Початковий масив з іменами - <span>${arr}</span></p>

@@ -18,7 +18,9 @@ if (confirm('Почати тестування?')) {
 
 	const getNewArrOfAutoNumbersBeginningWith = (arr, letter) => {
 		let newArr = []
-		arr.map(el => el[0].toUpperCase() === letter ? newArr.push(el) : null)
+		arr.forEach(el => {
+			if(el[0].toUpperCase() === letter) newArr.push(el)
+		})
 
 		return newArr
 	}
