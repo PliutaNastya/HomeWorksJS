@@ -22,8 +22,8 @@ document.write(`
 	<p>Сума чисел із другого об'єкту складає <span>${sum2}</span></p>
 	`)
 
-const prod1 = obj2.product.apply(obj1, [9, 58])
-const prod2 = obj2.product(32, 89)
+const prod1 = obj2.product.apply(obj1, [2, 45])
+const prod2 = obj2.product(3, 58)
 document.write(`
 	<p>Добуток чисел із першого об'єкту складає <span>${prod1}</span></p>
 	<p>Добуток чисел із другого об'єкту складає <span>${prod2}</span></p>
