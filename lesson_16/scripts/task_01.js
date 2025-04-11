@@ -99,7 +99,7 @@ class TDate {
 		this.Month = ((totalMonth - 1) % 12) + 1
 
 		if (this.Day > this.getDaysNumsInMonth()) this.Day = this.getDaysNumsInMonth()
-		
+
 		return this.toString()
 	}
 
@@ -132,34 +132,38 @@ class TDate {
 	}
 }
 
-const date = new TDate(24, 3, 1996)
-document.write(`
+try {
+	const date = new TDate(24, 3, 1996)
+	document.write(`
 	<h2>Введена дата - ${date}</h2>
 	`)
-date.addDays(100)
-document.write(`
+	date.addDays(100)
+	document.write(`
 	<p>Додала 100 днів - ${date}</p>
 	`)
-date.removeDays(100)
-document.write(`
+	date.removeDays(100)
+	document.write(`
 	<p>Відняла 100 днів - ${date}</p>
 	`)
-date.addMonths(100)
-document.write(`
+	date.addMonths(100)
+	document.write(`
 	<p>Додала 100 місяців - ${date}</p>
 	`)
-date.removeMonths(100)
-document.write(`
+	date.removeMonths(100)
+	document.write(`
 	<p>Відняла 100 місяців - ${date}</p>
 	`)
-date.addYears(100)
-document.write(`
+	date.addYears(100)
+	document.write(`
 	<p>Додала 100 років - ${date}</p>
 	`)
-date.removeYears(100)
-document.write(`
+	date.removeYears(100)
+	document.write(`
 	<p>Відняла 100 років - ${date}</p>
 	`)
+} catch (error) {
+	document.write(error)
+}
 
 
 // Ці тести згенерував чатGPT. Останні два не пройшли, але я вже і не знаю як це виправити

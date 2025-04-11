@@ -67,21 +67,25 @@ class TMoney {
 	}
 }
 
-const money = new TMoney(200, 40)
-money.addGrn(1000)
-document.write(`
+try {
+	const money = new TMoney(200, 40)
+	money.addGrn(1000)
+	document.write(`
 	<h2>Додала 1000грн</h2>
 	${money.toString()}
 	`)
-money.removeGrn(1000)
-document.write(`
+	money.removeGrn(1000)
+	document.write(`
 	<h2>Забрала 1000грн</h2>
 	${money.toString()}
 	`)
-document.write(`
+	document.write(`
 	<h2>Щоб я отримала на 100грн більше курс долара має бути:</h2>
 	${money.getNewRateAfterAddingGrn()}
 	`)
+} catch (error) {
+	document.write(error)
+}
 
 
 // Ці тести згенерував чатGPT

@@ -55,7 +55,7 @@ class TBankomat {
 
 	withdrawMoney(moneyAmount) {
 		if (moneyAmount > this.getMaxAvailableSum()) throw new Error("В банкоматі не вистачає купюр")
-		
+
 		const sortList = this.banknotesList.slice().sort((a, b) => b.banknote - a.banknote)
 
 		let result = {}
@@ -80,23 +80,30 @@ class TBankomat {
 	}
 }
 
-const banknotesList = [
-	new Banknote(5, 5),
-	new Banknote(10, 5),
-	new Banknote(20, 5),
-	new Banknote(50, 5),
-	new Banknote(100, 5),
-	new Banknote(200, 5)
-]
 
-const atm = new TBankomat(banknotesList)
+try {
+	const banknotesList = [
+		new Banknote(5, 5),
+		new Banknote(10, 5),
+		new Banknote(20, 5),
+		new Banknote(50, 5),
+		new Banknote(100, 5),
+		new Banknote(200, 5)
+	]
+	const atm = new TBankomat(banknotesList)
 
-console.log("Максимальна сума:", atm.getMaxAvailableSum()) 
-console.log("Мінімальна сума:", atm.getMinAvailableSum())
+	document.write(`<p>Максимальна сума складає <span>${atm.getMaxAvailableSum()} грн</span></p>`)
+	document.write(`<p>Мінімальна сума складає <span>${atm.getMinAvailableSum() } грн</span></p>`)
 
-console.log("Зняття 385 грн:")
-console.log(atm.withdrawMoney(385))
-console.log(banknotesList)
+
+	console.log("Зняття 385 грн:")
+	console.log(atm.withdrawMoney(385))
+	console.log(banknotesList)
+	
+} catch (error) {
+	document.write(error)
+}
+
 
 
 

@@ -2,14 +2,14 @@
 
 // Задача 03. Задача 3. Об’єкт “Фірма” (використати члени-класи)
 // поля
-	// назва фірми;
-	// дата заснування(рік, місяць);
-	// послуги(назва послуги, вартість, термін виконання);
-	// адреси філіалів(країна, місто, вулиця, номер будинку);
+// назва фірми;
+// дата заснування(рік, місяць);
+// послуги(назва послуги, вартість, термін виконання);
+// адреси філіалів(країна, місто, вулиця, номер будинку);
 // методи
-	// визначення кількості років існування фірми;
-	// виведення всіх філіалів фірми у вказаному місті;
-	// виведення на екран послуг, що можуть бути виконані за вказану суму грошей та вказаний термін часу;
+// визначення кількості років існування фірми;
+// виведення всіх філіалів фірми у вказаному місті;
+// виведення на екран послуг, що можуть бути виконані за вказану суму грошей та вказаний термін часу;
 
 function checkNaturalNumber(value, message) {
 	if (value <= 0 || isNaN(value) || typeof (value) !== "number") throw new Error(message)
@@ -22,7 +22,7 @@ class FoundationDate {
 		this.Year = year
 		this.Month = month
 	}
-	
+
 	get Year() {
 		return this.#year
 	}
@@ -55,7 +55,7 @@ class Service {
 		return this.#name
 	}
 	set Name(newName) {
-		if(!newName) throw new Error("Введено некоректну назву послуги")
+		if (!newName) throw new Error("Введено некоректну назву послуги")
 		this.#name = newName
 	}
 	get Price() {
@@ -92,21 +92,21 @@ class BranchAddress {
 		return this.#country
 	}
 	set Country(newCountry) {
-		if(!newCountry) throw new Error("Некоректний ввід країни")
+		if (!newCountry) throw new Error("Некоректний ввід країни")
 		this.#country = newCountry
 	}
 	get City() {
 		return this.#city
 	}
 	set City(newCity) {
-		if(!newCity) throw new Error("Некоректний ввід міста")
+		if (!newCity) throw new Error("Некоректний ввід міста")
 		this.#city = newCity
 	}
 	get Street() {
 		return this.#street
 	}
 	set Street(newStreet) {
-		if(!newStreet) throw new Error("Некоректний ввід вулиці")
+		if (!newStreet) throw new Error("Некоректний ввід вулиці")
 		this.#street = newStreet
 	}
 	get HouseNumber() {
@@ -123,7 +123,8 @@ class BranchAddress {
 
 class Firm {
 	#name
-	constructor(name, foundationDate, service, branchAddress) {branchAddress
+	constructor(name, foundationDate, service, branchAddress) {
+		branchAddress
 		this.Name = name
 		this.foundationDate = foundationDate
 		this.service = service
@@ -162,21 +163,26 @@ class Firm {
 	}
 }
 
-const foundationDate = new FoundationDate(2021, 2)
-const servicesList = [
-	new Service("Service-1", 245, 10),
-	new Service("Service-2", 3456, 100),
-	new Service("Service-3", 765, 20),
-]
-const branchAddresses = [
-	new BranchAddress("Країна-1", "Місто-1", "Вулиця-1", 23),
-	new BranchAddress("Країна-2", "Місто-2", "Вулиця-2", 3),
-	new BranchAddress("Країна-3", "Місто-3", "Вулиця-3", 5)
-]
-const someFirm = new Firm("Firm Name", foundationDate, servicesList, branchAddresses)
-document.write(`<p>${someFirm.getFirmYears()}</p>`)
-document.write(`<p>${someFirm.getBranchesInCity("Місто-3")}</p>`)
-document.write(`<p>${someFirm.getAvailableServices(4000, 100)}</p>`)
+try {
+	const foundationDate = new FoundationDate(2021, 2)
+	const servicesList = [
+		new Service("Service-1", 245, 10),
+		new Service("Service-2", 3456, 100),
+		new Service("Service-3", 765, 20),
+	]
+	const branchAddresses = [
+		new BranchAddress("Країна-1", "Місто-1", "Вулиця-1", 23),
+		new BranchAddress("Країна-2", "Місто-2", "Вулиця-2", 3),
+		new BranchAddress("Країна-3", "Місто-3", "Вулиця-3", 5)
+	]
+	const someFirm = new Firm("Firm Name", foundationDate, servicesList, branchAddresses)
+	document.write(`<p>Фірмі існує ${someFirm.getFirmYears()} роки</p>`)
+	document.write(`<p>${someFirm.getBranchesInCity("Місто-3")}</p>`)
+	document.write(`<p>${someFirm.getAvailableServices(4000, 100)}</p>`)
+} catch (error) {
+	document.write(error)
+}
+
 
 
 
