@@ -24,9 +24,7 @@ class CompanyCar {
 }
 
 const car = new CompanyCar('Дмитро', "ЗАЗ", "ВН34567")
-
 document.write(car)
 
 const car2 = new CompanyCar('Анатолій', "BMW", "ОД98457")
-
 document.write(car2)
