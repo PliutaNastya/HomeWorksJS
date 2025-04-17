@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../scripts/task_02.js" async></script>
+	<link rel="stylesheet" href="../css/task_02.css">
+	<title>Завдання 02</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="container">
+				<h1>Конвертер валют</h1>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div id="converter">
+					<div class="input-wrapper">
+						<label for="uahSum">Введіть суму в гривнях</label>
+						<input type="number" name="uahSum" id="uahSum">
+					</div>
+					<div class="input-wrapper">
+						<label for="currencySelect">Оберіть валюту</label>
+						<select name="currency" id="currencySelect">
+							<option value="euro">Euro</option>
+							<option value="dol">Dollar</option>
+							<option value="pound">Pound Sterling</option>
+							<option value="zloty">Polish Zloty</option>
+							<option value="norKrone">Norwegian Krone</option>
+						</select>
+					</div>
+					<button type="button" class="button-convert">Конвертувати</button>
+					<div class="result">
+						Результат: <span id="resultValue"></span>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<p class="copy">&copy; Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

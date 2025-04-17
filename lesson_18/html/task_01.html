@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../scripts/task_01.js" async></script>
+	<link rel="stylesheet" href="../css/task_01.css">
+	<title>Завдання 01</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="container">
+				<h1>Калькулятор</h1>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div id="calculator">
+					<div class="input-wrapper">
+						<label for="firstNumber">Введіть перше число:</label>
+						<input type="number" name="first number" id="firstNumber">
+					</div>
+					<div class="input-wrapper">
+						<label for="secondNumber">Введіть друге число:</label>
+						<input type="number" name="second number" id="secondNumber">
+					</div>
+					<div class="buttons">
+						<button type="button" aria-label="" class="button-symbol button-plus">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g   stroke-width="0"></g>
+								<g    stroke-linecap="round" stroke-linejoin="round"></g>
+								<g >
+									<path d="M4 12H20M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</g>
+							</svg>
+						</button>
+						<button type="button" aria-label="" class="button-symbol button-minus">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g   stroke-width="0"></g>
+								<g    stroke-linecap="round" stroke-linejoin="round"></g>
+								<g >
+									<path d="M6 12L18 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</g>
+							</svg>
+						</button>
+						<button type="button" aria-label="" class="button-symbol button-multiply">
+							<svg fill="currentColor" viewBox="-3.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+								<g   stroke-width="0"></g>
+								<g    stroke-linecap="round" stroke-linejoin="round"></g>
+								<g >
+									<path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path>
+								</g>
+							</svg>
+						</button>
+						<button type="button" aria-label="" class="button-symbol button-division">
+							<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g   stroke-width="0"></g>
+								<g    stroke-linecap="round" stroke-linejoin="round"></g>
+								<g >
+									<path d="M5 11C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9H15C15.5523 9 16 9.44772 16 10C16 10.5523 15.5523 11 15 11H5Z" fill="currentColor"></path>
+									<circle cx="10" cy="5.5" r="1.5" fill="currentColor"></circle>
+									<circle cx="10" cy="14.5" r="1.5" fill="currentColor"></circle>
+								</g>
+							</svg>
+						</button>
+					</div>
+					<div class="result">
+						Результат: <span id="result"></span>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<p class="copy">&copy; Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
