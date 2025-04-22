@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Poetsen+One:regular&display=swap");
+@import "reset.css";
+
+body {
+	font-family: "Poetsen One", cursive;
+	background: linear-gradient(180deg, #394253 0%, #181c27 147.23%) fixed;
+	color: #fff;
+	line-height: 1.3;
+}
+.wrapper {
+	min-block-size: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+.container {
+	max-width: 84.375rem;
+	inline-size: 100%;
+	padding-inline: 0.9375rem;
+	margin-inline: auto;
+}
+h1,
+.copy {
+	font-size: 32px;
+	text-align: center;
+}
+header,
+main,
+footer {
+	padding-block: 20px;
+}
+
+.cards {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+	background-color: #fff;
+	color: #394253;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 15px;
+}
+.card {
+	border: 3px solid #c802ff;
+	transition: border-color 0.3s;
+
+	&.active {
+		border-color: #03bb00;
+	}
+
+	a {
+		position: relative;
+		padding: 30px 10px;
+		display: grid;
+		row-gap: 25px;
+	}
+}
+.labels {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 5;
+
+	display: grid;
+	row-gap: 3px;
+
+	color: #160029;
+}
+.label {
+	font-size: 12px;
+	padding: 4px 8px;
+	border-radius: 14px;
+	background-color: #fff;
+
+	&.label--promotion {
+		background-color: #fe8e8e;
+	}
+	&.label--sale {
+		background-color: #feef8e;
+	}
+	&.label--top {
+		background-color: #b5fe8e;
+	}
+}
+.card__image {
+	overflow: hidden;
+	img {
+		width: 100%;
+		aspect-ratio: 304 / 184;
+		object-fit: cover;
+		transition: transform 0.3s ease-in-out;
+
+		&:hover {
+			transform: scale(0.97);
+		}
+	}
+}
+.card__title {
+	color: #160029;
+	font-size: 20px;
+	font-weight: 700;
+	transition: color 0.3s ease-in-out;
+
+	&:hover {
+		color: #00414d;
+	}
+}
+.card__prices {
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+}
+.card__price {
+	font-weight: 500;
+}
+.card__price--old {
+	color: #9e0005;
+	text-decoration: line-through;
+}
+.card__price--new {
+	color: #025f00;
+	font-weight: 700;
+}

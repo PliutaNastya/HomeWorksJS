@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Poetsen+One:regular&display=swap");
+@import "reset.css";
+
+body {
+	font-family: "Poetsen One", cursive;
+	background: linear-gradient(180deg, #394253 0%, #181c27 147.23%) fixed;
+	color: #fff;
+	line-height: 1.3;
+}
+.wrapper {
+	min-block-size: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+.container {
+	max-width: 84.375rem;
+	inline-size: 100%;
+	padding-inline: 0.9375rem;
+	margin-inline: auto;
+}
+h1,
+.copy {
+	font-size: 32px;
+	text-align: center;
+}
+header,
+main,
+footer {
+	padding-block: 20px;
+}
+.manager-selector *:not(button) {
+	margin-block-end: 15px;
+}
+h2 {
+	font-size: 24px;
+}
+span {
+	margin-inline-start: 15px;
+}
+.member-item {
+	max-width: 500px;
+	width: 100%;
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	justify-content: space-between;
+	div:has(button) {
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+	}
+	button {
+		padding: 10px 20px;
+		background-color: rgb(0, 90, 95);
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: rgb(0, 51, 54);
+		}
+	}
+}
