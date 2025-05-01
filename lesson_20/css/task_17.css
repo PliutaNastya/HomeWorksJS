@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+@import "reset.css";
+
+body {
+	width: 100vw;
+	height: 100vh;
+	color: #fff;
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.3;
+	font-size: clamp(1rem, 1.119vw + 0.408rem, 1.75rem);
+	overflow: hidden;
+}
+.container {
+	max-width: 1330px;
+	width: 100%;
+	padding-inline: 15px;
+	margin-inline: auto;
+
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	text-align: center;
+}
+#welcome-screen {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: url("../img/bg.jpeg") center / cover no-repeat;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #0202029c;
+	}
+}
+.title {
+	font-size: clamp(1.5rem, 2.461vw - 0.078rem, 2.875rem);
+	strong {
+		display: block;
+		color: rgb(255, 132, 0);
+	}
+	margin-block-end: 15px;
+}
+.text {
+	margin-block-end: 15px;
+	p {
+		margin-block-end: 10px;
+	}
+}
+.button {
+	display: block;
+	margin-inline: auto;
+	padding: 10px 83px;
+	background-color: rgb(255, 132, 0);
+	border-radius: 35px;
+	transition: background-color 0.3s ease-in-out;
+
+	&:hover {
+		background-color: rgb(163, 84, 0);
+	}
+}
+#game-screen {
+	position: relative;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+
+	background: url("../img/game_bg.webp") center / cover fixed no-repeat;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #0202029c;
+	}
+}
+.image {
+	width: clamp(4.688rem, 8.389vw - 0.692rem, 9.375rem);
+	aspect-ratio: 1;
+	object-fit: cover;
+	border-radius: 50%;
+	cursor: pointer;
+	position: fixed;
+}
+
+#score {
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 20px;
+	color: white;
+	z-index: 1000;
+	pointer-events: none;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(0, 0%, 0%, 0.5);
+	z-index: 50;
+}
+.cursor {
+	width: 50px;
+	aspect-ratio: 1;
+	z-index: 10000;
+	background-image: url('../img/cursor.png');
+	background-size: cover;
+	position: absolute;
+	pointer-events: none;
+}
