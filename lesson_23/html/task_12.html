@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../scripts/task_12.js" async></script>
+	<link rel="stylesheet" href="../css/task_12.css">
+	<title>Завдання 12</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<h2>Регулярні вирази</h2>
+			<div class="box">
+				<div class="box-item">
+					<h3>Дано масив рядків. Вивести ті, у яких є цифри (використати метод test та регулярні вирази).</h3>
+					<pre>
+						<code>
+							const pattern = /\d/ 
+							const result1 = stringsArr.filter(
+								string => pattern.test(string)
+								) 
+							console.log(result1)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано масив рядків.Вивести ті, у яких немає цифр.</h3>
+					<pre>
+						<code>
+							const pattern2 = /\d/ 
+							const result2 = stringsArr.filter(
+								string => !pattern2.test(string)
+								) 
+								console.log(result2)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано масив рядків.Вивести ті, у яких є голосні літери.</h3>
+					<pre>
+						<code>
+							const pattern3 = /[аоуиієяю]/i 
+							const result3 = stringsArr.filter(
+								string => pattern3.test(string)
+								) 
+							console.log(result3)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано масив рядків.Вивести ті, у яких немає голосних літер.</h3>
+					<pre>
+						<code>
+							const pattern4 = /[аоуиієяю]/i 
+							const result4 = stringsArr.filter(
+								string => !pattern4.test(string)
+								) 
+								console.log(result4)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано масив рядків.Вивести ті, у яких є або цифра 1 або цифра 3.</h3>
+					<pre>
+						<code>
+							const pattern5 = /(1|3)/ 
+							const result5 = stringsArr.filter(
+								string => pattern5.test(string)
+								) 
+								console.log(result5)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано рядок тексту, вивести усі числа, які є у тексті.</h3>
+					<pre>
+						<code>
+							const string = "На подвір’ї стояло 3 груші й 12 яблунь! Маленький Сашко зібрав (25 яблук) і 7 груш. Йому було всього 9 років, але він працював краще за 15 дорослих?"
+
+							const pattern6 = /\d/g 
+							const result6 = string.match(pattern6) 
+							console.log(result6)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано рядок тексту.Знайти усі знаки пунктуації, які були використано.</h3>
+					<pre>
+						<code>
+							const string = "На подвір’ї стояло 3 груші й 12 яблунь! Маленький Сашко зібрав (25 яблук) і 7 груш. Йому було всього 9 років, але він працював краще за 15 дорослих?"
+
+							const pattern7 = /[,;:'"`_?!.’()]/g 
+							const result7 = string.match(pattern7) 
+							console.log(result7)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано рядок тексту.Вивести усі складові, які розділені розділовими знаками.</h3>
+					<pre>
+						<code>
+							const string = "На подвір’ї стояло 3 груші й 12 яблунь! Маленький Сашко зібрав (25 яблук) і 7 груш. Йому було всього 9 років, але він працював краще за 15 дорослих?"
+
+							const pattern8 = /[,;:'"`?!.()\s]/g 
+							const result8 = string.split(pattern8) 
+							console.log(result8)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано рядок тексту.Перевірити, чи містить він дату у форматі dd.mm.yyyy(dd - день, mm - місяць, yyyy - рік).</h3>
+					<pre>
+						<code>
+							const text = "Наш наступний візит заплановано на 11.05.2025, не забудь! Наступного разу вийде лише 11.09.2025"
+
+							const pattern9 = /\d{2}\.\d{2}\.\d{4}/g 
+							const result9 = pattern9.test(text) 
+							console.log(result9 ? 'Рядок тексту містить дату' : 'Рядок тексту не містить дату')
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано рядок тексту.Підрахувати кількість двоцифрових чисел у рядку.</h3>
+					<pre>
+						<code>
+							const pattern10 = /\b\d{2}\b/g 
+							const result10 = text.match(pattern10) 
+							if (result10) { 
+								const digit2Count = result10.length 
+								console.log(digit2Count) 
+							}
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Визначити чи може бути рядок тексту номером банківської картки(приклад: «4142 - 3433 - 2323 - 3434»).Знайти усі такі номери.</h3>
+					<pre>
+						<code>
+							const textWithCardNumber = "Ось приклади номерів: 4142-3433-2323-3434 та 5123 4567 8901 2345. А це — не номер: 123-456-789." 
+							
+							const pattern11 = /\d{4}[-\s]\d{4}[-\s]\d{4}[-\s]\d{4}/g 
+							const result11 = textWithCardNumber.match(pattern11) 
+							console.log(result11)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано адресу сайту.Визначити, чи є він урядовим(містить домен “gov”)</h3>
+					<pre>
+						<code>
+							const url = "https://www.kmu.gov.ua/services" 
+
+							const pattern12 = /\.gov\b/ 
+							const result12 = url.match(pattern12) 
+							console.log(result12 && result12.length > 0 ? 'урядовий' : 'неурядовий')
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Вибрати усі роки після 2021 року з отриманого повідомлення</h3>
+					<pre>
+						<code>
+							const message = "У 2020 році ми досягли значних результатів, але справжні зміни почалися в 2022 році. Далі ми плануємо досягти нових висот у 2023, 2024 та 2025 роках. 2034, 2056, 2098, 2067." 
+							
+							const pattern13 = /202[2-9]|20[3-9]\d/g 
+							const result13 = message.match(pattern13) 
+							console.log(result13)
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Дано номер телефону.Перевірити, чи є цей телефон телефоном з України(починаєтсья на «+38»)</h3>
+					<pre>
+						<code>
+							const phoneNumber = "+380501234567" 
+							
+							const pattern14 = /^\+380/ 
+							const result14 = pattern14.test(phoneNumber) 
+							console.log(result14 ? 'З України' : 'Не з України')
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Користувач вводить прізвище та ім’я в одному рядку через пробіл.Замінити пробіл на дефіс.</h3>
+					<pre>
+						<code>
+							const userName = prompt('Введіть своє прізвище та ім\'я') 
+
+							if (userName) { 
+								const formattedName = userName.replace(/\s+/g, '-') 
+								console.log(formattedName) 
+							} else console.log('Дані не були введені')
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Користувач вводить дату у форматі «день.місяць.рік». Отримати рядкове представлення дати у форматі «день / місяць / рік»</h3>
+					<pre>
+						<code>
+							const userDate = prompt('Введіть дату у форматі «день.місяць.рік»') 
+
+							if (userDate) { 
+								const formattedDate = userDate.replace(/\./g, '/') 
+								console.log(formattedDate) 
+							} else console.log('Дані не були введені')
+						</code>
+					</pre>
+				</div>
+				<div class="box-item">
+					<h3>Користувач вводить день(номер дня(0 - 6) або «sun, mon, tue, wed, thu, fri, sat»).Визначити, чи є це день вихідним</h3>
+					<pre>
+						<code>
+							const userDay = prompt('Введіть день у форматі номер дня(0 - 6) або «sun, mon, tue, wed, thu, fri, sat»') 
+							
+							const pattern17 = /^(0|6|sun|sat)$/ 
+							if (userDay) { 
+								const isWeekend = pattern17.test(userDay) 
+								console.log(isWeekend ? 'Вихідний' : 'Не вихідний') 
+							} else console.log('Дані не були введені')
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
